@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body style = "background-color: rgb(29, 70, 70);">
+
+  <div class="container" style="color:black;background-color: rgb(21, 96, 106);">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1 style ="color: white">Belly Button Biodiversity Dashboard</h1>
+        <p style ="color: white">Use the interactive charts below to explore the dataset
+      </p>
+      </div>
+    </div>
+    <div class="row">
+      <center> <p style ="color: white; font-size: 25px">This website is an exploration of the bacterial ecosystem present within belly buttons.
+        Specifically, the data tracks the different types and total population of bacteria present in individual belly buttons.
+        Additionally, it explores the impact of directly washing a belly button has on the types and populations of bacteria present.
+     </p> </center>
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <p><small>Choose a Test ID # to change the charts</small></p>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <p style = "color:aliceblue"><small>This is the top 10 bacteria cultures found in the Test Subject's belly button.</small></p>
+        <div id="bar"></div>
+
+      </div>
+      <div class="col-md-5">
+        <p style = "color:aliceblue"><small>This is a guage indicating the wash frequency of the Test Subject's belly button.</small></p>
+        <div id="gauge"></div>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p style = "color:aliceblue"><small>This graph indicates the population size and compares the population of each bacteria culture.</small></p>
+        <div id="bubble"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/plots.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
