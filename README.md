@@ -1,1 +1,3 @@
 # Biodiversity
+
+## The purpose of this repository is to provide a staging area for the underlying code used to analyze the biodiversity in bellybutton bacteria cultures. The data was aggregated in a .json file and javascript was used to collect and display the data in meaningful charts. HTML and CSS were then used to customize the webpage to look a little fancy even if a bit weird due to my inexperience in web development. But it was fun. 
